@@ -1,0 +1,43 @@
+/* .cartItemWrapper{
+    border-bottom: 1px solid grey;
+    border-top: 1px solid grey;
+    max-width:800px;
+    width: 100%;
+}
+.cartItemWrapper img{
+    max-width: 300px;
+    max-height: 300px;
+    width: 10%;
+    height: 30%;
+  
+    border-radius: 20px;
+  } */
+
+
+
+   .cart{
+    position: relative;
+    border: 1px solid #ccc;
+}
+.amount span{
+    color: crimson;
+    padding: 0 20px;
+}
+.amount .count{
+    width: 40px;
+    height: 30px;
+    border: 1px solid #555;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+}
+.delete{
+    position: absolute;
+    top:0;
+    right: 5px;
+    color: crimson;
+    cursor: pointer;
+    font-weight: 900;
+}
+
+

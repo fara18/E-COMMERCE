@@ -1,16 +1,22 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { getAllProducts } from "../../requests/getProducts";
-import Container from "../../components/Products/Container/Container";
-
+import React from "react";
+import { useSelector } from "react-redux";
+import ProductContainer from "../../components/Products/Container/ProductContainer";
+import SortForm from "../../components/FilterForms/SortForm/SortForm";
+import FilterForm from "../../components/FilterForms/FilterForm/FilterForm";
+import DiscontForm from "../../components/FilterForms/DiscontForm/DiscontForm";
+import s from './AllProducts.module.css'
 export default function AllProducts() {
-  const dispatch = useDispatch();
-  useEffect(() => dispatch(getAllProducts), []);
+  
   const allProductsState = useSelector((store) => store.allProducts);
-
+console.log(allProductsState);
   return (
     <div>
-      <Container state={allProductsState} />
+    
+      <FilterForm />
+      <SortForm />
+      <DiscontForm />
+      <ProductContainer state={allProductsState}  />
+     
     </div>
   );
 }
