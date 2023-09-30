@@ -18,7 +18,7 @@ export default function CartItem({ id, title, image, price, count , description 
           <h2>{title}</h2>
           <span>{price * count}$</span>
         </div>
-        <p>{description}</p>
+        {/* <p>{description}</p> */}
         <div className={s.amount}>
         <button className={s.count} onClick={()=>dispatch(decrementItemAction(id))}>-</button>
         <span>{count}</span>

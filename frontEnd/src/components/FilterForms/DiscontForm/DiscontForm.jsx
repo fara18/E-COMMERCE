@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { getDiscontProductsAction } from '../../../store/reducers/allProductsReducer'
 import { useDispatch } from 'react-redux'
-
+import { getDiscontProductsByCategoryAction } from '../../../store/reducers/productsByCategoriesReducer';
+import  './DiscontForm.css'
 export default function DiscontForm() {
   const dispatch = useDispatch();
 
@@ -9,14 +10,21 @@ export default function DiscontForm() {
 
   const handleChange = () => setCheckboxChecked(!checkboxChecked);
 
-  const get_discont = e => dispatch(getDiscontProductsAction(e.target.checked));
+  const get_discont = e => {
+    dispatch(getDiscontProductsAction(e.target.checked))
+    dispatch(getDiscontProductsByCategoryAction(e.target.checked))
+  };
 
   return (
-    <div>
-      <label>
-        <p>items with discount</p>
-        <input type="checkbox" checked={checkboxChecked} onChange={handleChange} onClick={get_discont}/>
+    <div class="checkbox-wrapper-3">
+      <p>Editors choice</p>
+    
+        <input type="checkbox" checked={checkboxChecked} onChange={handleChange} onClick={get_discont} id="cbx-3" />
+       
+      <label for="cbx-3" class="toggle" >
+      <span></span>
       </label>
+
     </div>
   )
 }

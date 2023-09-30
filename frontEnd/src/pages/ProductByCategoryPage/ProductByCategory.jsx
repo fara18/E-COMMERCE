@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 
 import ProductContainer from "../../components/Products/Container/ProductContainer";
 import { getProductsByCategory } from "../../requests/getProducts";
+import FIlterForms from "../../components/FilterForms/FIlterForms";
 
 export default function ProductByCategory() {
   const { id } = useParams();
@@ -17,7 +18,7 @@ export default function ProductByCategory() {
 
   return (
     <div>
-  
+  <FIlterForms />
      
       <ProductContainer state={category_state} />
     </div>
