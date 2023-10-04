@@ -11,15 +11,14 @@ export default function SortForm() {
 
     }
   return (
-    <div>
+    <div className={s.sortContainer}>
       <label className={s.sortForm} >
         <p>Sort</p>
         <select onInput={sort}>
         <option value='default'>By default</option>
             <option value="title">By A-Z</option>
-            <option value="priceAsc">By price asc</option>
-            <option value="priceDesc">By price desc</option>
-            <option value="rating">By most popular</option>
+            <option value="priceAsc">By price ascending</option>
+            <option value="priceDesc">By price descending</option>
         </select>
       </label>
     </div>

@@ -5,7 +5,6 @@ import { addToCartAction } from "../../../store/reducers/cartReducer";
 import s from "./ProductsItem.module.css";
 export default function Item({ id, title, image, price, discont_price,description }) {
   const dispatch = useDispatch();
-const description_short = description.slice(0,70)+'...'
 const discont = Math.floor(((price - discont_price) / price) * 100);
   return (
 

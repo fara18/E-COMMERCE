@@ -25,3 +25,11 @@ export const getSingleProduct = id => {
     }
 }
 
+export const adNewProduct =(newProduct)=>{
+    fetch('http://localhost:3333/sale/send',{
+        method:'POST',
+        body:JSON.stringify(newProduct)
+    })
+    .then(res=>res.json())
+    .then(json=> console.log(json,'You got 5% discount on your next purchase'))
+}

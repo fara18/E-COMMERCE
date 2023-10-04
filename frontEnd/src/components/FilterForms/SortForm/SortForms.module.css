@@ -1,3 +1,31 @@
-.sortForm {
-    display: flex ;
+/* .sortContainer{
+    width: 350px;
+   
+} */
+.sortForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.sortForm > p{
+    margin-right: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    
+}
+
+
+.sortForm>select{
+   
+    all: unset;
+    background-color: rgba(106, 106, 106, 0.497);
+    overflow: hidden;
+    border: 1px solid rgba(255, 255,255, 0.5);
+    backdrop-filter: blur(5px);
+    width: 150px;
+    padding: 3px 0px 3px 10px;
+   color: white;
+   border-radius: 5px;
+   cursor: pointer;
 }

@@ -2,7 +2,7 @@ import React from 'react'
 import { useDispatch } from 'react-redux'
 import { filterProductsAction } from '../../../store/reducers/allProductsReducer'
 import { filterProductsByCategoryAction } from '../../../store/reducers/productsByCategoriesReducer'
-import './FilterForm.css'
+import s from'./FilterForm.module.css'
 export default function FilterForm() {
   const dispatch = useDispatch()
   const submit =e =>{
@@ -14,11 +14,13 @@ export default function FilterForm() {
     dispatch(filterProductsByCategoryAction({minValue,maxValue}))
   }
   return (
-    <form onSubmit={submit}>
+    <form className={s.filterContainer} onSubmit={submit}>
+      <div className={s.filterWrapper}>
       <p>Price</p>
       <input type="number" placeholder='From' name='min' />
       <input type="number" placeholder='To' name='max' />
-      <button>Search </button>
+      <button>Search</button>
+      </div>
     </form>
   )
 }

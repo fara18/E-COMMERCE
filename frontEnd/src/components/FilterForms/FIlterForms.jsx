@@ -5,10 +5,12 @@ import FilterForm from "./FilterForm/FilterForm";
 import s from './FilterForms.module.css'
 export default function FIlterForms() {
   return (
-    <div className={s.filterForms} >
+    <div >
+      <div className={s.formsWrapper}>
       <FilterForm />
-      <DiscontForm />
       <SortForm />
+      <DiscontForm />
+      </div>
     </div>
   );
 }

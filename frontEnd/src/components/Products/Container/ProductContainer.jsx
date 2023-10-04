@@ -5,6 +5,7 @@ export default function ProductContainer({ state }) {
   return (
 
     <div className={s.product}>
+      
       {state &&
         state
           .filter((el) => el.showProduct)

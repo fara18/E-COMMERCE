@@ -8,8 +8,8 @@ export default function AllProducts() {
   console.log(allProductsState);
   return (
     <div>
+      <h1>All products</h1>
       <FIlterForms />
-
       <ProductContainer state={allProductsState} />
     </div>
   );

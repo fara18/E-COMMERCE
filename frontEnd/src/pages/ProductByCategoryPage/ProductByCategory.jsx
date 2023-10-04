@@ -20,7 +20,7 @@ export default function ProductByCategory() {
     <div>
   <FIlterForms />
      
-      <ProductContainer state={category_state} />
+      <ProductContainer state={category_state}  />
     </div>
   );
 }

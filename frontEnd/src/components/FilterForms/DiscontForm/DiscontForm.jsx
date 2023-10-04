@@ -17,6 +17,7 @@ export default function DiscontForm() {
 
   return (
     <div class="checkbox-wrapper-3">
+      <div class='checkbox-container'>
       <p>Editors choice</p>
     
         <input type="checkbox" checked={checkboxChecked} onChange={handleChange} onClick={get_discont} id="cbx-3" />
@@ -24,7 +25,7 @@ export default function DiscontForm() {
       <label for="cbx-3" class="toggle" >
       <span></span>
       </label>
-
+      </div>
     </div>
   )
 }

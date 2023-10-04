@@ -1,9 +1,16 @@
-.checkbox-wrapper-3{
-  display: flex;
+/* .checkbox-wrapper-3{
+  width: 350px;
   
+} */
+.checkbox-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.checkbox-wrapper-3 > p {
-margin-right: 10px;
+.checkbox-container > p {
+  margin-right: 10px;
+  font-size: 20px;
+  font-weight: 600;
 }
 .checkbox-wrapper-3 input[type="checkbox"] {
     visibility: hidden;

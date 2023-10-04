@@ -12,3 +12,13 @@
   - Создать productsByCategoryReducer, loadProductsByCategoryAction, добавить action в корневой редьюсер
   - Написать функцию, отправляющую fetch-запрос по ссылке https://fakestoreapi.com/products/category/:category и записывающую полученные данные в состояние (вызвать loadProductsByCategoryAction)
   - Достать состояние из store в ProductsByCategoryPage, отрисовать карточки (ProductsContainer, ProductCard). ProductsContainer импортировать в ProductsByCategoryPage 
+  
+  
+  
+  ВИДЫ FETCH-ЗАПРОСОВ
+
+GET - получение данных
+POST - добавление данных
+DELETE - удаление данных
+PUT - полное изменение существующих данных
+PATCH - частичное изменение существующих данных

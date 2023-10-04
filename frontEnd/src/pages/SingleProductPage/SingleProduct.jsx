@@ -11,9 +11,9 @@ export default function SingleProduct() {
   useEffect(() => dispatch(getSingleProduct(id)), []);
   const singleProductState = useSelector((store) => store.singleProduct);
   console.log(singleProductState);
-  const { title, price, description, image, categoryId } = singleProductState;
+  const { title, price, description, image, discont_price } = singleProductState;
   const link = `http://localhost:3333${image}`;
-
+  const discont = Math.floor(((price - discont_price) / price) * 100);
   return (
     <div className={s.singleProduct}>
       <div className={s.details}>
@@ -25,9 +25,19 @@ export default function SingleProduct() {
      <div className={s.box}>
       <div className={s.row}>
       <h2>{title}</h2>
-      <span>${price}</span>
+     
       </div>
-    
+      <div className={s.prices}>
+{
+  discont_price?
+  <div className={s.priceBox}>
+          <span className={s.discont_price}>${discont_price}</span>
+          <span className={s.price}>${price}</span>
+          <span className={s.discont}>- {discont}%</span>
+          </div> :
+           <span >$ {price}</span>
+}
+      </div>
     
      <p>{description}</p>
     

@@ -48,9 +48,6 @@ span{
     text-transform: uppercase;
     letter-spacing: 2px;
   }
-  .box .row span{
-    color: crimson;
-  }
 
   .box p{
     line-height: 1.5;
@@ -75,4 +72,23 @@ span{
     .bigImg img{
       width: 50px;
     }
+  }
+  .prices{
+    
+  }
+  .priceBox{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  width: 200px;
+  }
+  
+  .discont{
+    font-size: 20px;
+    color: #db3e3e;
+    
+  }
+  .price{
+    text-decoration: line-through;
+    color: grey;
   }

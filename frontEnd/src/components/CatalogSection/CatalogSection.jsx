@@ -33,21 +33,3 @@ export default function CatalogSection() {
     
   )
 }
-//  <div >
-//       {/* <h1>Catalog</h1>
-
-//       <div className="catalogContainer">
-//         <div className="catalogWrapper">
-          
-//           <ul className="catalogItems"> */}
-//             {
-//             categories.map((el) => (
-//               <Item key={el.id} category={el} {...el} />
-//             ))
-//             }
-//           {/* </ul>
-        
-        
-//         </div>
-//       </div> */}
-//     </div>

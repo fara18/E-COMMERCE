@@ -1,15 +1,15 @@
-.filterForms {
-    width: 600px;
-    
-     display: flex;
-     justify-content: space-between;
- 
-   margin-left: 10px;
+
+.formsWrapper {
+
+  display: flex;
+  gap: 20px;
+  margin-left: 10px;
+
   
-       @media (max-width:600px){
-        flex-direction: column;
-        align-items: start;
-        padding: 10px 0;
-       }
+  @media (max-width:800px){
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+   }
 
 }

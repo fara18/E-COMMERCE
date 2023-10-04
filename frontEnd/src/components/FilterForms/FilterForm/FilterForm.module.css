@@ -1,0 +1,47 @@
+/* .filterContainer{
+  width: 350px;
+} */
+.filterWrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.filterWrapper > p{
+  margin-right: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  
+}
+
+.filterWrapper>input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.filterWrapper>input{
+  all: unset;
+  background-color: rgba(106, 106, 106, 0.497);
+
+    overflow: hidden;
+    border: 1px solid rgba(255, 255,255, 0.5);
+    backdrop-filter: blur(5px);
+   padding: 5px 0 5px 10px;
+   color: white;
+   border-radius: 5px;
+   cursor: pointer;
+}
+.filterWrapper > button {
+  display: none;
+  width: 100px;
+  padding: 5px 0 5px 0px;
+  background: #5c7ac592;
+  overflow: hidden;
+  border: 0.5px solid rgba(255, 255,255, 0.5);
+
+  color: white;
+  backdrop-filter: blur(5px);
+  text-align: center;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 1em;
+}

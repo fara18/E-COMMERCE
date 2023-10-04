@@ -7,16 +7,16 @@ export default function HomeSection() {
     
         <div className='hero-container'>
      
-      <h1>TITLE</h1>
-      <p>TEXT</p>
+      <h1>WELCOME</h1>
+      <p>Check out our best offers this week</p>
       <div className='hero-btns'>
         <Button
           className='btns'
           buttonStyle='btn--outline'
           buttonSize='btn--large'
-          link='*'
+          link='/sale'
         >
-         Txt
+         <i class="fa-solid fa-arrow-right"></i>
         </Button>
         
         <Button
