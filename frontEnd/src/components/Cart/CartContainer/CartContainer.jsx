@@ -1,18 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import CartItem from "../CartItem/CartItem";
 import { deleteAllItemsAction } from "../../../store/reducers/cartReducer";
 import s from "./CartContainer.module.css";
 import { Link } from "react-router-dom";
 export default function CartContainer() {
-  const cartState = useSelector((store) => store.cart);
-  console.log(cartState);
   const dispatch = useDispatch();
+  
+  const cartState =  useSelector((store) => store.cart);
+  
   const total = cartState.reduce((acc, { price, discont_price, count }) => {
     const totalPrice = discont_price ? discont_price : price;
     return acc + totalPrice * count;
   }, 0);
-
+  
+  useEffect(() => {
+    localStorage.setItem("product", JSON.stringify(cartState));
+  }, [cartState]);
+  
   return (
     <div>
       {cartState.length > 0 ? (
@@ -24,16 +29,16 @@ export default function CartContainer() {
               ))}
             </div>
             <div className={s.orderContainer}>
-              <h3>Order detail </h3>
+              <h3>Details </h3>
 
               <p>Total: ${total.toFixed(2)}</p>
-              
-             
-                <div className={s.clearCartBtn} onClick={() => dispatch(deleteAllItemsAction())}>
-                  Clear cart
-                </div>
-              
-            
+
+              <div
+                className={s.clearCartBtn}
+                onClick={() => dispatch(deleteAllItemsAction())}
+              >
+                Clear cart
+              </div>
             </div>
           </div>
         </div>

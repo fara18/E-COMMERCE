@@ -1,11 +1,10 @@
 import React from "react";
 import ProductsItem from "../Item/ProductsItem";
 import s from "./ProductContainer.module.css";
-export default function ProductContainer({ state }) {
+export default function ProductContainer({ state,title }) {
   return (
 
     <div className={s.product}>
-      
       {state &&
         state
           .filter((el) => el.showProduct)

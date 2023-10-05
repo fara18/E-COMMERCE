@@ -3,6 +3,7 @@ import SaleSection from '../../components/SaleSection/SaleSection'
 import s from './SalePage.module.css'
 import FilterForm from '../../components/FilterForms/FilterForm/FilterForm'
 import SortForm from '../../components/FilterForms/SortForm/SortForm'
+import DiscountFilterForms from '../../components/FilterForms/DiscountFilterForms'
 
 export default function SalePage() {
   return (
@@ -11,10 +12,7 @@ export default function SalePage() {
       
       <div className={s.filterWrapper}>
       
-      <div className={s.filterForms}>
-      <FilterForm />
-      <SortForm />
-      </div>
+    <DiscountFilterForms />
       
   
     </div>

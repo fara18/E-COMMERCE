@@ -47,11 +47,11 @@ export default function Footer() {
       <div class='social-media-wrap'>
         <div class='footer-logo'>
           <Link to='/' className='social-logo'>
-          NAME
-            <i class="fa-solid fa-tree" />
+          PARADISE
+          <i class="fa-brands fa-pagelines"></i>
           </Link>
         </div>
-        <small class='website-rights'>NAME © 2023</small>
+        <small class='website-rights'>PARADISE © 2023</small>
         
       </div>
     </section>

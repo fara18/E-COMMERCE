@@ -2,7 +2,7 @@ import React from 'react'
 import s from './CatalogItem.module.css'
 import {Link} from 'react-router-dom'
 
-export default function Item({id,title,image,props}) {
+export default function Item({id,title,image}) {
   return (
   
   <>

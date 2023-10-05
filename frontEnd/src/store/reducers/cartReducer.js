@@ -19,8 +19,9 @@ const checkProduct = (state, payload) => {
     return [...state]
   }
 }
+const initialState = JSON.parse(localStorage.getItem('product')) || []
 
-export const cartReducer = (state = [], action) => {
+export const cartReducer = (state = initialState, action) => {
   if (action.type === ADD_TO_CART) {
     return checkProduct(state, action.payload)
   } 

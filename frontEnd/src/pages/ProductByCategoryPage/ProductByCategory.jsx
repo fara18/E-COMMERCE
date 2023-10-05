@@ -7,7 +7,7 @@ import ProductContainer from "../../components/Products/Container/ProductContain
 import { getProductsByCategory } from "../../requests/getProducts";
 import FIlterForms from "../../components/FilterForms/FIlterForms";
 
-export default function ProductByCategory() {
+export default function ProductByCategory({title}) {
   const { id } = useParams();
   const dispatch = useDispatch();
   useEffect(() => dispatch(getProductsByCategory(id)), []);
@@ -18,9 +18,9 @@ export default function ProductByCategory() {
 
   return (
     <div>
-  <FIlterForms />
-     
-      <ProductContainer state={category_state}  />
+
+      <FIlterForms />
+      <ProductContainer state={category_state} title={title} />
     </div>
   );
 }

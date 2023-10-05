@@ -21,9 +21,7 @@ export const allProductsReducer = (state = [], action) => {
             state.sort((a, b) => b.price - a.price)
         } else if (action.payload === 'default') {
             state.sort((a, b) => a.id - b.id)
-        } else if (action.payload === 'rating') {
-            state.sort((a, b) => b.rating - a.rating)
-        }
+        } 
         return [...state]
     } else if (action.type === FILTER_PRODUCTS) {
 

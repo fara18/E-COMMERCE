@@ -6,7 +6,6 @@
   padding: 10px;
   box-shadow: 10px 3px 20px #ddd;
   margin: 10px;
-  transition: 0.5s linear;
  
 }
 .card:hover {
@@ -28,9 +27,13 @@
 .card h3 a {
   text-decoration: none;
   color: #333;
+  transition: all 0.5s ease;
+
+ 
 }
 .card h3 a:hover {
-  color: crimson;
+  color: #2d9a6ec7;
+
 }
 
 .card p {
