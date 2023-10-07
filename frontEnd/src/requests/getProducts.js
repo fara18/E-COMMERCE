@@ -14,7 +14,7 @@ export const getProductsByCategory = id => {
     return dispatch =>{
         fetch(`${serverLink}/categories/${id}`)
         .then(res=>res.json())
-        .then(json => dispatch(loadProductByCategory(json.data)))
+        .then(json => dispatch(loadProductByCategory(json)))
     }
 }
 

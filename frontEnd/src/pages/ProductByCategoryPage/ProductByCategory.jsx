@@ -7,20 +7,19 @@ import ProductContainer from "../../components/Products/Container/ProductContain
 import { getProductsByCategory } from "../../requests/getProducts";
 import FIlterForms from "../../components/FilterForms/FIlterForms";
 
-export default function ProductByCategory({title}) {
+export default function ProductByCategory() {
   const { id } = useParams();
   const dispatch = useDispatch();
   useEffect(() => dispatch(getProductsByCategory(id)), []);
 
-  const category_state = useSelector((store) => store.productsByCategory);
-
-  console.log(category_state);
-
+  const category_state = useSelector(store => store.productsByCategory.data);
+  const category_name = useSelector(store => store.productsByCategory.category);
+console.log(category_state);
   return (
     <div>
-
+      <h1>{category_name?.title}</h1>
       <FIlterForms />
-      <ProductContainer state={category_state} title={title} />
+      <ProductContainer state={category_state}  />
     </div>
   );
 }

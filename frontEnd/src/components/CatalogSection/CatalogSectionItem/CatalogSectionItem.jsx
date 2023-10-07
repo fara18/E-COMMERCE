@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import s from '../CatalogSection.module.css'
 export default function CatalogSectionItem({id,title,image}) {
+ 
   return (
     <div className={s.catalogItem}>
         <Link className={s.catalogItemLink} to={`/categories/${id}`}>
