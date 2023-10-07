@@ -8,7 +8,6 @@ export default function SortForm() {
     const sort = e => {
       dispatch(sortProductsAction(e.target.value))
       dispatch(sortProductsByCategoryAction(e.target.value))
-
     }
   return (
     <div className={s.sortContainer}>

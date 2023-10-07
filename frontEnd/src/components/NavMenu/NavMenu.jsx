@@ -79,9 +79,3 @@ export default function NavMenu() {
   );
 }
 
-{
-  /* <NavLink to='/catalog'>Catalog</NavLink>
-      <NavLink to='/allProducts'>Products</NavLink>
-      <NavLink to='/allSales'>Sales</NavLink>
-      <NavLink to='/cart'><i class="fa-solid fa-basket-shopping"></i></NavLink> */
-}

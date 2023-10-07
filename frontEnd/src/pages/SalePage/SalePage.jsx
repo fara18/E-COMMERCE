@@ -1,8 +1,6 @@
 import React from 'react'
 import SaleSection from '../../components/SaleSection/SaleSection'
 import s from './SalePage.module.css'
-import FilterForm from '../../components/FilterForms/FilterForm/FilterForm'
-import SortForm from '../../components/FilterForms/SortForm/SortForm'
 import DiscountFilterForms from '../../components/FilterForms/DiscountFilterForms'
 
 export default function SalePage() {

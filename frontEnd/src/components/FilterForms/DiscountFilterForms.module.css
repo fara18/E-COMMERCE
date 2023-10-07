@@ -1,17 +1,12 @@
-
 .formsWrapper {
+  display: flex;
+  gap: 20px;
+  margin-left: 10px;
+  margin-bottom: 10px;
 
+  @media (max-width: 600px) {
     display: flex;
-    gap: 20px;
-    margin-left: 10px;
-    margin-bottom: 10px;
-  
-    
-    @media (max-width:600px){
-      display: flex;
-      flex-direction: column;
-      align-items: start;
-     }
-  
-
+    flex-direction: column;
+    align-items: start;
+  }
 }

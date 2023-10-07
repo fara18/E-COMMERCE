@@ -18,6 +18,7 @@ import SignUpPage from "./pages/SignUpPage/SignUpPage";
 
 function App() {
   const dispatch = useDispatch();
+  
   useEffect(() => dispatch(getAllCategories), []);
   useEffect(() => dispatch(getAllProducts), []);
 

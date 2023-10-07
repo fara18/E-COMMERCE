@@ -1,6 +1,5 @@
 import React from 'react'
-import { getAllCategories } from '../../requests/getAllCategories'
-import {useDispatch, useSelector} from 'react-redux'
+import { useSelector} from 'react-redux'
 import CatalogContainer from '../../components/Catalog/Container/CatalogContainer'
 export default function Catalog() {
 const category_state = useSelector(state=>state.categories)

@@ -1,8 +1,3 @@
-
-
-
-
-
 .catalogItem {
   display: flex;
   flex: 1;
@@ -33,7 +28,7 @@
 }
 
 .catalogItemPicWrap::after {
-   /* content: attr(data-category);  */
+  /* content: attr(data-category);  */
   position: absolute;
   bottom: 0;
   margin-left: 10px;
@@ -72,15 +67,8 @@
   text-align: center;
 }
 
-
-
-
-
-
-
-
 @media only screen and (max-width: 1024px) {
-    .catalogItem {
-      margin-bottom: 2rem;
-    }
+  .catalogItem {
+    margin-bottom: 2rem;
   }
+}
