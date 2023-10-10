@@ -26,11 +26,12 @@ export default function FormItem({title,info,btn,formType,login}) {
     reset()
 }
   return (
-    <div className={s.formContainer}>
+    <div className={s.formWrapper}>
     <form className={s.form} onSubmit={handleSubmit(submit)}>
      
       <h3>{title}</h3>
       <div>
+    
         <FormInput
         type='text'
         placeholder='Email'
@@ -41,7 +42,9 @@ export default function FormItem({title,info,btn,formType,login}) {
         {
           formType=== 'passwordReset'
           ?''
-          : <FormInput
+          : 
+          
+          <FormInput
           type='password'
           placeholder='Password'
           name='password'

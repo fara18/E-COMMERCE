@@ -1,10 +1,18 @@
 .input {
-  border: 1px solid #CFD8DC;
+  all: unset;
+  border-bottom: 1px solid #CFD8DC;
     padding: 14px 16px;
-    border-radius: 12px;
     outline: none;
+    transition: all 0.2s ease;
   }
   
+  .input:hover {
+   
+    border-bottom: 1px solid #4dff9a;
+  }
+
   .input:focus {
-    border: 1px solid #FFE44D;
+    scale: 1.01;
+
+    border-bottom: 1px solid #4dff9a;
   }

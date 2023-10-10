@@ -11,8 +11,11 @@ export default function DiscontForm() {
   const handleChange = () => setCheckboxChecked(!checkboxChecked);
 
   const get_discont = (e) => {
+    
     dispatch(getDiscontProductsAction(e.target.checked));
+
     dispatch(getDiscontProductsByCategoryAction(e.target.checked));
+  
   };
 
   return (

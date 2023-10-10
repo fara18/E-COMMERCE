@@ -8,12 +8,13 @@ export default function FilterForm() {
   
   const submit =e =>{
     e.preventDefault()
-    console.log(123);
     const {min,max} = e.target
     const minValue = min.value || 0;
     const maxValue = max.value || Infinity;
     dispatch(filterProductsAction({minValue,maxValue}))
-    dispatch(filterProductsByCategoryAction({minValue,maxValue}))
+    
+    dispatch(filterProductsByCategoryAction({minValue,maxValue})
+    )
   }
   
   return (

@@ -5,9 +5,9 @@ export default function SignUpPage() {
   return (
     <div>
      <FormItem
-        title="Sign Up"
+        title="Log in"
      
-        btn={{ submit: "Sign Up", redirect: "Login" }}
+        btn={{ submit: "Log in", redirect: "Don't have a account? Register" }}
         formType="signUp"
            info="By signing up on the site, you agree to our Rules and Privacy Policy
         and consent to the newsletter."

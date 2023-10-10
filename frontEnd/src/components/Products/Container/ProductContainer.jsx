@@ -7,6 +7,7 @@ export default function ProductContainer({ state }) {
     <div className={s.product}>
       {state &&
         state
+        .filter((el)=>el.show_product && el.show_sale)
           .map((el) => <ProductsItem key={el.id} {...el} />)}
     </div>
     

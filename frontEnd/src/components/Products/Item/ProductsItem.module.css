@@ -37,10 +37,13 @@
 }
 
 .card p {
+  font-family: 'PT Sans', sans-serif;
+
   margin: 10px 0 ;
  height: 40px;
  max-height: 50px;
  text-overflow: ellipsis;
+ 
  overflow: hidden;
         text-overflow: ellipsis;
         display: -moz-box;

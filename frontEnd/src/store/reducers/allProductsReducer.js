@@ -10,7 +10,7 @@ export const getDiscontProductsAction = payload => ({ type: GET_DISCONT_PRODUCTS
 
 export const allProductsReducer = (state = [], action) => {
     if (action.type === LOAD_ALL_PRODUCTS) {
-        return action.payload.map(el => ({ ...el, showProduct: true }))
+        return action.payload.map(el => ({ ...el, show_product: true , show_sale:true}))
     } 
     else if (action.type === SORT_PRODUCTS) {
         if (action.payload === 'title') {
@@ -27,24 +27,28 @@ export const allProductsReducer = (state = [], action) => {
         
         const { minValue, maxValue } = action.payload
         return state.map(el => {
-            if (el.price >= minValue && el.price <= maxValue || el.discont_price>= minValue && el.discont_price<= maxValue) {
-                el.showProduct = true
+            if (
+                (el.discont_price ? el.discont_price : el.price) >= minValue &&
+                (el.discont_price ? el.discont_price : el.price) <= maxValue
+              ) {
+                el.show_product = true
             } else {
-                el.showProduct = false
+                el.show_product = false
             }
             return el
         })
-    } else if (action.type === GET_DISCONT_PRODUCTS) {
+    } 
+    else if (action.type === GET_DISCONT_PRODUCTS) {
         if(action.payload){
             return state.map(el => {
               if(el.discont_price===null){
-                el.showProduct = false
+                el.show_sale = false
               }
               return el
             })
           } else {
             return state.map(el => {
-              el.showProduct = true;
+              el.show_sale = true;
               return el
             })
           }
